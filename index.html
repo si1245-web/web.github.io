@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Valorant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos iniciales para la ventana modal de la imagen (oculta por defecto) */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Asegura que esté por encima de todo */
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 20px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="valorant-logo.png" alt="Logo de Valorant" class="logo">
+            <h1>Blog Valorant</h1>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="#introduccion">Inicio</a></li>
+            <li><a href="#agentes-section">Agentes</a></li>
+            <li><a href="#mapas-section">Mapas</a></li>
+            <li><a href="#modos">Modos de Juego</a></li>
+            <li><a href="#estrategias">Guías y Estrategias</a></li>
+            <li><a href="#noticias">Actualizaciones</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="introduccion" class="section">
+            <h2>Introducción</h2>
+            <p>Valorant es un shooter táctico en primera persona desarrollado por Riot Games. Desde su lanzamiento en 2020, se ha convertido en uno de los juegos más populares del género, gracias a su combinación única de habilidades especiales y combate táctico.</p>
+        </section>
+
+        <section id="agentes-section" class="section">
+            <h2>Agentes</h2>
+            <p>Haz clic en el nombre de un agente para ver su imagen:</p>
+            <div class="category-grid">
+                <div class="category">
+                    <h3>Duelistas</h3>
+                    <ul>
+                        <li><a href="#" data-image="phoenix.avif">Phoenix</a></li>
+                        <li><a href="#" data-image="jett.avif">Jett</a></li>
+                        <li><a href="#" data-image="reyna.avif">Reyna</a></li>
+                        <li><a href="#" data-image="raze.avif">Raze</a></li>
+                        <li><a href="#" data-image="yoru.avif">Yoru</a></li>
+                        <li><a href="#" data-image="neon.avif">Neon</a></li>
+                        <li><a href="#" data-image="iso.avif">Iso</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Iniciadores</h3>
+                    <ul>
+                        <li><a href="#" data-image="breach.avif">Breach</a></li>
+                        <li><a href="#" data-image="sova.webp">Sova</a></li>
+                        <li><a href="#" data-image="skye.avif">Skye</a></li>
+                        <li><a href="#" data-image="kayo.avif">KAY/O</a></li>
+                        <li><a href="#" data-image="gekko.avif">Gekko</a></li>
+                        <li><a href="#" data-image="deadlock.avif">Deadlock</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Controladores</h3>
+                    <ul>
+                        <li><a href="#" data-image="brimstone.avif">Brimstone</a></li>
+                        <li><a href="#" data-image="omen.webp">Omen</a></li>
+                        <li><a href="#" data-image="viper.avif">Viper</a></li>
+                        <li><a href="#" data-image="astra.avif">Astra</a></li>
+                        <li><a href="#" data-image="harbor.avif">Harbor</a></li>
+                        <li><a href="#" data-image="clove.avif">Clove</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Centinelas</h3>
+                    <ul>
+                        <li><a href="#" data-image="sage.jpg">Sage</a></li>
+                        <li><a href="#" data-image="cypher.jpg">Cypher</a></li>
+                        <li><a href="#" data-image="killjoy.jpg">Killjoy</a></li>
+                        <li><a href="#" data-image="chamber.jpg">Chamber</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="mapas-section" class="section">
+            <h2>Mapas</h2>
+            <p>Haz clic en el nombre de un mapa para ver su imagen:</p>
+            <ul class="map-list">
+                <li><a href="#" data-image="ascent.avif">Ascent</a></li>
+                <li><a href="#" data-image="bind.avif">Bind</a></li>
+                <li><a href="#" data-image="haven.avif">Haven</a></li>
+                <li><a href="#" data-image="split.avif">Split</a></li>
+                <li><a href="#" data-image="breeze.avif">Breeze</a></li>
+                <li><a href="#" data-image="icebox.avif">Icebox</a></li>
+                <li><a href="#" data-image="fracture.avif">Fracture</a></li>
+                <li><a href="#" data-image="pearl.avif">Pearl</a></li>
+                <li><a href="#" data-image="lotus.avif">Lotus</a></li>
+                <li><a href="#" data-image="sunset.avif">Sunset</a></li>
+            </ul>
+        </section>
+
+        <section id="modos" class="section">
+            <h2>Modos de Juego</h2>
+            <p>Valorant ofrece diversos modos de juego para adaptarse a diferentes estilos y objetivos:</p>
+            <ul class="game-modes-list">
+                <li><strong>Competitivo:</strong> El modo principal donde los jugadores suben y bajan de rango.</li>
+                <li><strong>No Clasificado:</strong> Partidas estándar sin impacto en el rango.</li>
+                <li><strong>Spike Rush:</strong> Rondas rápidas y acceso instantáneo a todas las habilidades.</li>
+                <li><strong>Deathmatch:</strong> Modo libre para practicar puntería sin habilidades.</li>
+                <li><strong>Team Deathmatch:</strong> Un modo 5v5 con reapariciones rápidas y el objetivo de ser el primer equipo en alcanzar una cierta cantidad de eliminaciones.</li>
+                <li><strong>Escalada:</strong> Un modo arcade donde se prueban diferentes armas y habilidades.</li>
+                <li><strong>Réplica:</strong> Todos los jugadores del mismo equipo juegan con el mismo agente elegido al azar.</li>
+                <li><strong>Otros modos:</strong> Snowball Fight (Evento)</li>
+            </ul>
+        </section>
+
+        <section id="estrategias" class="section">
+            <h2>Guías y Estrategias</h2>
+            <p>Para destacar en Valorant, es importante dominar no solo las mecánicas de disparo, sino también la comunicación en equipo y el manejo de economía. Aquí tienes algunos consejos:</p>
+            <ul class="tips-list">
+                <li>Comunicación clara y constante con el equipo.</li>
+                <li>Control de mapa: dominar las zonas clave.</li>
+                <li>Administración de créditos y compra de equipo de manera eficiente.</li>
+                <li>Posicionamiento adecuado para maximizar el ángulo de visión.</li>
+                <li>Aprender los puntos clave y las "calls" de cada mapa.</li>
+                <li>Practicar el uso de las habilidades de cada agente.</li>
+            </ul>
+        </section>
+
+        <section id="noticias" class="section">
+            <h2>Actualizaciones</h2>
+            <p>Mantente informado sobre las últimas actualizaciones, cambios en el juego y próximos eventos de Valorant.</p>
+            <div id="news-container">
+                <p>Próximamente se añadirán las últimas noticias y actualizaciones del juego.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Blog Valorant - Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="image-modal" id="imageModal">
+        <img src="" alt="Imagen Ampliada" class="modal-content" id="modalImage">
+    </div>
+
+<script>
+    // Event listeners para los nombres de los agentes
+    document.querySelectorAll('.category a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const imageName = this.getAttribute('data-image');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+
+            modalImage.src = 'agentes/' + imageName; // Ruta ajustada para la carpeta "agentes"
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Event listeners para los nombres de los mapas
+    document.querySelectorAll('.map-list a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const imageName = this.getAttribute('data-image');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+
+            modalImage.src = 'mapas/' + imageName; // Ruta ajustada para la carpeta "agentes"
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Cerrar el modal al hacer clic fuera de la imagen
+    const modal = document.getElementById('imageModal');
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Navegación suave para los enlaces principales del menú
+    document.querySelectorAll('.main-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (!this.getAttribute('data-image')) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

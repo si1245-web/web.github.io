@@ -1,0 +1,213 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna y legible */
+    margin: 0;
+    padding: 0;
+    background-color: #181818; /* Un tono de negro ligeramente más suave */
+    color: #f0f0f0; /* Un gris claro para mejor contraste */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    overflow-x: hidden; /* Evita barras de desplazamiento horizontales innecesarias */
+}
+
+/* Animación de fade-in más suave y con ligero desplazamiento vertical inicial */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* Menos desplazamiento inicial */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección con video de fondo */
+#video-section {
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-out; /* Ligero aumento en la duración */
+    border-radius: 8px; /* Añadido borde redondeado para suavizar la sección */
+    margin: 10px; /* Añadido un pequeño margen alrededor de la sección */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sutil sombra para dar profundidad */
+}
+
+#video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3; /* Ligeramente más transparente para que el texto destaque más */
+}
+
+#video-section section {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 60px 30px; /* Aumentado el padding para más espacio */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo ligeramente más oscuro */
+    border-radius: inherit; /* Hereda el border-radius del contenedor */
+    text-align: center; /* Centrado el texto dentro de la sección del video */
+}
+
+#video-section section h2 {
+    font-size: 2.8em; /* Título más grande */
+    margin-bottom: 15px;
+    color: #ff6b6b; /* Un tono de rojo ligeramente diferente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto del título */
+}
+
+#video-section section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto; /* Centra el párrafo */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #ff4d6d; /* Tono de rojo ligeramente más vibrante */
+    padding: 15px 0; /* Aumentado el padding vertical */
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.2s ease-out; /* Ligero aumento en la duración */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+    position: sticky; /* Fija el encabezado en la parte superior al hacer scroll */
+    top: 0;
+    z-index: 100; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em; /* Título más grande */
+    letter-spacing: 1px; /* Espaciado entre letras sutil */
+}
+
+/* Estilos de la navegación */
+nav {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinear los elementos del menú */
+    justify-content: center; /* Centra los elementos del menú */
+}
+
+nav ul li {
+    margin: 0 15px; /* Añade margen a los lados de los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Añadida transición para la transformación */
+    padding: 8px 12px; /* Añadido padding para un mejor área de clic */
+    border-radius: 5px; /* Añadido borde redondeado sutil */
+}
+
+nav ul li a:hover {
+    color: #ff8a80; /* Un tono de rojo diferente al hacer hover */
+    transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+}
+
+main {
+    margin: 30px auto; /* Centra el contenido principal y añade más margen */
+    max-width: 1200px; /* Ancho máximo para el contenido principal */
+    padding: 0 20px;
+}
+
+/* Animación para las secciones al entrar en viewport */
+section {
+    margin-bottom: 30px; /* Aumentado el margen inferior */
+    padding: 25px; /* Aumentado el padding */
+    background-color: #252525; /* Tono de gris más oscuro */
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-out; /* Añadido ease-out para una deceleración suave */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+    transform: translateY(15px); /* Ligero desplazamiento inicial para la animación */
+}
+
+/* Retrasos de animación más espaciados */
+section:nth-child(1) {
+    animation-delay: 0.2s;
+}
+section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+section:nth-child(3) {
+    animation-delay: 0.6s;
+}
+section:nth-child(4) {
+    animation-delay: 0.8s;
+}
+section:nth-child(5) {
+    animation-delay: 1s;
+}
+/* Añade retrasos para secciones adicionales si las tienes */
+section:nth-child(6) {
+    animation-delay: 1.2s;
+}
+section:nth-child(7) {
+    animation-delay: 1.4s;
+}
+section:nth-child(8) {
+    animation-delay: 1.6s;
+}
+section:nth-child(9) {
+    animation-delay: 1.8s;
+}
+section:nth-child(10) {
+    animation-delay: 2s;
+}
+
+section h2 {
+    color: #ff6b6b; /* Un tono de rojo ligeramente diferente */
+    border-bottom: 2px solid #444; /* Línea sutil debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 25px; /* Aumentado el padding izquierdo */
+    list-style-type: square; /* Viñetas cuadradas */
+}
+
+ul li {
+    margin-bottom: 8px; /* Más espacio entre los elementos de la lista */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #111;
+    color: #aaa; /* Un gris más claro para el texto del pie de página */
+    text-align: center;
+    padding: 20px 0; /* Aumentado el padding vertical */
+    margin-top: 30px; /* Aumentado el margen superior */
+    border-top: 1px solid #333;
+    animation: fadeIn 1.2s ease-out; /* Ligero aumento en la duración */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra superior */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em; /* Tamaño de fuente ligeramente más pequeño */
+}
+
+a {
+    color: rgb(255, 255, 255);         /* Cambia el color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+a:visited {
+    color: rgb(255, 255, 255);         /* Cambia el color de los enlaces visitados */
+}
+
+a:hover, a:active {
+    text-decoration: none; /* Asegura que al pasar el ratón tampoco aparezca el subrayado */
+}
